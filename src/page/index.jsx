@@ -1,5 +1,7 @@
 import React, {useState, useCallback} from 'react';
+import { useAlert } from 'react-alert'
 import api from '../service/';
+import './style.css'
 import Search from '../components/Search';
 import Result from '../components/Result';
 import Nav from '../components/Nav';
@@ -7,7 +9,7 @@ import Nav from '../components/Nav';
 function App(props) {
   const [adress, setAdress] = useState([]);
   const [value, setValue] = useState('');
-  const [alert, setAlert] = useState('');
+  const alert = useAlert();
 
   const onChange = useCallback((e) => {
     let {value} = e.target;
@@ -20,22 +22,22 @@ function App(props) {
   const onClick = useCallback(() => {
     if(!value){
       setAdress([]);
-      setAlert('insert zipcode');
+      alert.show('insert your zipCode')
     } else {
       api.get(`${value}/json/?callback=zipCode`)
       .then(response => {
         if(response.data.erro){
-          setAlert('not found...')
+          alert.show('not found...')
           setAdress([])
         } else{
-          setAlert('');
           setAdress(response.data)
         }
       })
       .catch(err => {
         console.log(err);
         setAdress('')
-        setAlert(`${value} is not a valid zip code. Please double-cheack it and try again.`)
+        alert.show(`${value} is not a valid zip code...`)
+        // setAlert(`${value} is not a valid zip code. Please double-cheack it and try again.`)
       }) 
     }
   }, [value])
@@ -45,9 +47,10 @@ function App(props) {
   return (
     <>
     <Nav />
+    <div className='page-container'>
     <Search placeholder='xxxxx-xxx' value={value} type='text' method={onChange} onClick={() => onClick()}/> 
-    <Result alert={alert} locality={adress.localidade} publicPlace={adress.logradouro} uf={adress.uf} neighborhood={adress.bairro} />
-
+    <Result locality={adress.localidade} publicPlace={adress.logradouro} uf={adress.uf} neighborhood={adress.bairro} />
+    </div>
     </>
   );
 }
