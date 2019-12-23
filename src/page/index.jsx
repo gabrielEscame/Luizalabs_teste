@@ -1,8 +1,8 @@
 import React, {useState, useCallback} from 'react';
 import api from '../service/';
 import Search from '../components/Search';
-import Button from '../components/Button';
 import Result from '../components/Result';
+import Nav from '../components/Nav';
 
 function App(props) {
   const [adress, setAdress] = useState([]);
@@ -10,7 +10,6 @@ function App(props) {
   const [alert, setAlert] = useState('');
 
   const onChange = useCallback((e) => {
-    e.preventDefault();
     let {value} = e.target;
     const filter = /^\d{1,8}$/;
     if(value === '' || filter.test(value)){
@@ -33,7 +32,11 @@ function App(props) {
           setAdress(response.data)
         }
       })
-      .catch(err => console.log(err)) 
+      .catch(err => {
+        console.log(err);
+        setAdress('')
+        setAlert(`${value} is not a valid zip code. Please double-cheack it and try again.`)
+      }) 
     }
   }, [value])
 
@@ -41,9 +44,9 @@ function App(props) {
   console.log(alert) 
   return (
     <>
-    <Search placeholder='search a zipCode' value={value} type='text' method={onChange}/> 
-    <Button label='Search' onClick={() => onClick()} />
-    <Result locality={adress.localidade} publicPlace={adress.logradouro} uf={adress.uf} neighborhood={adress.bairro} />
+    <Nav />
+    <Search placeholder='xxxxx-xxx' value={value} type='text' method={onChange} onClick={() => onClick()}/> 
+    <Result alert={alert} locality={adress.localidade} publicPlace={adress.logradouro} uf={adress.uf} neighborhood={adress.bairro} />
 
     </>
   );
