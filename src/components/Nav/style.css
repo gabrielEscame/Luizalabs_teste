@@ -1,0 +1,29 @@
+body{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  height: 60px;
+  box-shadow: 0px 3px 10px 10px rgba(0, 0, 0, 0.1);
+  background-color:white;
+  /* background-color: red; */
+}
+
+ul{
+  display: flex;
+}
+
+li{
+  margin-right: 40px;
+  list-style: none;
+  cursor: pointer;
+}
+
+img{
+  height: 40px;
+  margin-left: 40px;
+}
