@@ -1,0 +1,26 @@
+.result-container{
+  display: flex;
+  justify-content: center;
+  height: 75vh;
+  width: 66vw;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.result-container > table {
+  margin-top: 80px;
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+th{
+  font-weight: 400px;
+  color: rgba(0, 0, 0, 0.85)
+}
+
+td {
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
