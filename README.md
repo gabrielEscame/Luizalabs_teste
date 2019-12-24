@@ -23,6 +23,10 @@ No terminal, dentro da pasta do projeto rode o script `npm start` para iniciar a
 
 [Google api](https://console.developers.google.com/apis/library?hl=pt-br&project=cep-luizalabs&folder&organizationId)
 
+[AxiosJsonp](https://github.com/AdonisLau/axios-jsonp)
+
+[Redux](https://redux.js.org/)
+
 # Introdução
 
 ### Front-end test
