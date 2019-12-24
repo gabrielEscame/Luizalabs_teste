@@ -28,7 +28,7 @@ const Result = ({ locality, publicPlace, uf, neighborhood }) => {
           className='map'
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD_IJS-_ZkNbU2cCbXcQZwv1xxkE_VjNUA"
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `250px`, width: '600px', marginTop:'20px'}} />}
+          containerElement={<div style={{ height: `50vh`, width: '50vw', marginTop:'20px'}} />}
           mapElement={<div style={{ height: `250px` }} />}
           publicPlace={publicPlace}
         />

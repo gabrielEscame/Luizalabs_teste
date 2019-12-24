@@ -45,3 +45,16 @@
   padding: 5px 10px;
   background-color:#14aae2;
 }
+
+@media only screen and (max-width: 600px){
+  .search-container{
+    width: 80vw;
+    height: 50vh;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+
+  .search-container > p {
+    margin-bottom: 5px;
+  }
+} 
