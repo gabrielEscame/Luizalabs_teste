@@ -21,21 +21,18 @@ const App = (props)=> {
 
   const onClick = useCallback(() => {
     if(!value){
-      setAdress([]);
       alert.show('insert your zipCode')
     } else {
       api.get(`${value}/json/?callback=zipCode`)
       .then(response => {
         if(response.data.erro){
           alert.show('not found...')
-          setAdress([])
         } else{
           setAdress(response.data)
         }
       })
       .catch(err => {
         console.log(err);
-        setAdress('')
         alert.show(`${value} is not a valid zip code...`)
       }) 
     }
