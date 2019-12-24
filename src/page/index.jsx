@@ -6,8 +6,8 @@ import Search from '../components/Search';
 import Result from '../components/Result';
 import Nav from '../components/Nav';
 
-function App(props) {
-  const [adress, setAdress] = useState([]);
+const App = (props)=> {
+  const [adress, setAdress] = useState({localidade: 'São Paulo', logradouro: 'Praça da sé', uf:'sp', bairro: 'Sé'});
   const [value, setValue] = useState('');
   const alert = useAlert();
 
