@@ -51,10 +51,43 @@
     width: 80vw;
     height: 50vh;
     margin: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .search-container > p {
     margin-bottom: 5px;
   }
 } 
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .search-container{
+    width: 80vw;
+    height: 50vh;
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+
+  .search-container > p {
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
+
+  .search-container > h1{
+    font-size: 50px;
+  }
+
+  .search-container > input {
+    padding: 20px 40px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+
+  .search-container > h3 {
+    font-size: 30px;
+  }
+
+  .search-container > button {
+    padding: 12px 30px;
+    font-size: 18px;
+  }
+}

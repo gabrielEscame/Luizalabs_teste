@@ -25,3 +25,36 @@ td {
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
 }
+
+
+@media only screen and (max-width: 600px){
+  .result-container{
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+    margin-bottom: 30px;
+  }
+
+  .result-container > table {
+    font-size: 10px;
+    padding-right: 0px;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .result-container{
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+    margin-bottom: 30px;
+  }
+
+  .result-container > table {
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    padding-right: 0px;
+    width: 80%;
+  }
+}
