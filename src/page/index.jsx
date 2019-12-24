@@ -37,13 +37,10 @@ function App(props) {
         console.log(err);
         setAdress('')
         alert.show(`${value} is not a valid zip code...`)
-        // setAlert(`${value} is not a valid zip code. Please double-cheack it and try again.`)
       }) 
     }
-  }, [value])
-
-  console.log(adress); 
-  console.log(alert) 
+  }, [value, alert])
+  
   return (
     <>
     <Nav />

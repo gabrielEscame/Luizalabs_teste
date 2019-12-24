@@ -6,9 +6,9 @@ const Nav = () => {
     <nav>
       <img src={process.env.PUBLIC_URL + 'findzip.png'} alt="logo"/>
       <ul>
-        <li><a href="https://www.google.com.br/"></a>Home</li>
-        <li><a href="https://www.google.com.br/"></a>About</li>
-        <li><a href="https://www.google.com.br/"></a>Contacts</li>
+        <li><a href="https://www.google.com.br/">Home</a></li>
+        <li><a href="https://www.google.com.br/">About</a></li>
+        <li><a href="https://www.google.com.br/">Contacts</a></li>
       </ul>
     </nav>
   );
