@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps'
 import Geocode from 'react-geocode';
 
-Geocode.setApiKey('AIzaSyD_IJS-_ZkNbU2cCbXcQZwv1xxkE_VjNUA');
+Geocode.setApiKey(`${process.env.REACT_APP_MAPS_KEY}`);
 Geocode.setLanguage('en');
 Geocode.setRegion('br');
 
@@ -22,7 +22,6 @@ const Map = (publicPlace) => {
       })
   }, [publicPlace])
 
-    console.log(publicPlace.publicPlace, lat, lng);
   return(
     <GoogleMap defaultZoom={10} center={{ lat: lat,  lng: lng}}>
       <Marker position={{ lat: lat, lng: lng }}/>
