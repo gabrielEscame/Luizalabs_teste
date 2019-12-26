@@ -29,7 +29,7 @@ No terminal, dentro da pasta do projeto rode o script `npm start` para iniciar a
 
 [AxiosJsonp](https://github.com/AdonisLau/axios-jsonp)
 
-[Redux](https://redux.js.org/)
+[Regex](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
 # Introdução
 
