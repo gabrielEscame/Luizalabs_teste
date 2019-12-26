@@ -1,5 +1,9 @@
 # LuizaLabs | front-end challenge
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a692fb81-b255-4cf3-8fe4-bda34c85208e/deploy-status)](https://app.netlify.com/sites/luizalabs-findzip/deploys)
+
+https://luizalabs-findzip.netlify.com/
+
 ## Instalação
 
 1. Faça o download da aplicação usando o terminal.
